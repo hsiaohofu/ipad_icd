@@ -31,7 +31,9 @@
             <div class="col">
                 <button class="btn btn-primary" onclick="showSection('pediatrics')">兒科</button>
             </div>
-        </div>
+                        <div class="col">
+                <button class="btn btn-danger" onclick="showSection('major')">重大</button>
+            </div>        </div>
 
         <!-- 下方4個div, 對應"內外婦兒" -->
         <div id="internal" class="row mb-4 d-none">
@@ -63,7 +65,12 @@
                 <p>兒科相關內容</p>
             </div>
         </div>
-    </div>
+
+                <div id="major" class="row mb-4 d-none">
+            <div class="col">
+                <p>重大疾病</p>
+            </div>
+        </div>    </div>
 
     <script>
         function updateText(text) {
@@ -76,7 +83,7 @@
             document.getElementById('surgery').classList.add('d-none');
             document.getElementById('gynecology').classList.add('d-none');
             document.getElementById('pediatrics').classList.add('d-none');
-            
+            document.getElementById('major').classList.add('d-none');
             // 顯示對應的div
             document.getElementById(section).classList.remove('d-none');
             
@@ -94,7 +101,9 @@
                 case 'pediatrics':
                     updateText('兒科');
                     break;
-            }
+                                    case 'major':
+                    updateText('重大');
+                    break;            }
         }
     </script>
 
